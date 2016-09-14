@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="parrot_demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lf1-hq-RRW">
+                                <rect key="frame" x="285" y="285" width="30" height="30"/>
+                                <state key="normal" title="飛ぶ"/>
+                                <connections>
+                                    <action selector="button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uyP-4B-p5D"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q96-Et-dM8">
+                                <rect key="frame" x="279" y="347" width="129" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="129" id="V6M-Rr-Yoc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejz-hz-B4y">
+                                <rect key="frame" x="278" y="221" width="45" height="30"/>
+                                <state key="normal" title="降りる"/>
+                                <connections>
+                                    <action selector="didPressDrop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fo7-5A-JkO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mH6-zZ-z32">
+                                <rect key="frame" x="285" y="143" width="30" height="30"/>
+                                <state key="normal" title="回転"/>
+                                <connections>
+                                    <action selector="didPressFlip:" destination="BYZ-38-t0r" eventType="touchUpInside" id="udX-2R-lht"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Lf1-hq-RRW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9uo-dL-eIS"/>
+                            <constraint firstItem="q96-Et-dM8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="279" id="Iri-TQ-C6Q"/>
+                            <constraint firstItem="Lf1-hq-RRW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pwq-B5-CrB"/>
+                            <constraint firstItem="mH6-zZ-z32" firstAttribute="trailing" secondItem="ejz-hz-B4y" secondAttribute="trailing" id="UdW-yt-3Ca"/>
+                            <constraint firstItem="ejz-hz-B4y" firstAttribute="top" secondItem="mH6-zZ-z32" secondAttribute="bottom" constant="48" id="ZI3-JR-0Sf"/>
+                            <constraint firstItem="Lf1-hq-RRW" firstAttribute="top" secondItem="ejz-hz-B4y" secondAttribute="bottom" constant="34" id="hm8-0T-Dk0"/>
+                            <constraint firstItem="ejz-hz-B4y" firstAttribute="centerX" secondItem="Lf1-hq-RRW" secondAttribute="centerX" id="ofY-db-4aU"/>
+                            <constraint firstItem="q96-Et-dM8" firstAttribute="top" secondItem="Lf1-hq-RRW" secondAttribute="bottom" constant="32" id="tlb-xL-hM0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label1" destination="q96-Et-dM8" id="Qfd-4L-cjx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="174" y="356"/>
+        </scene>
+    </scenes>
+</document>
